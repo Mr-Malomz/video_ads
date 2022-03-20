@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'video_ads',
+    title: 'video_thumbnail',
     htmlAttrs: {
       lang: 'en',
     },
@@ -14,7 +14,21 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/cloudinary-video-player@1.5.9/dist/cld-video-player.min.css',
+      },
+    ],
+    script: [
+      {
+        src: 'https://unpkg.com/cloudinary-core@latest/cloudinary-core-shrinkwrap.min.js',
+      },
+      {
+        src: 'https://unpkg.com/cloudinary-video-player@1.5.9/dist/cld-video-player.min.js',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
